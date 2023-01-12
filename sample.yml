@@ -10,5 +10,8 @@
       ansible.builtin.systemd:
         name: nginx
         state: started
-    - name: remove default nginx files
-      ansible.builtin.shell: /bin/rm-rf /usr/share/nginx/html/*
+    - name: Ansible delete file glob
+      find:
+        paths: /usr/share/nginx/html/
+        patterns: "*"
+      register: files_to_delete
