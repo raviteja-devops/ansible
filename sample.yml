@@ -10,3 +10,5 @@
       ansible.builtin.systemd:
         name: nginx
         state: started
+    - name: remove default nginx files
+      ansible.builtin.shell: rm-rf /usr/share/nginx/html/*
