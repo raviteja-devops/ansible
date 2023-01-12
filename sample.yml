@@ -14,3 +14,8 @@
       ansible.builtin.file:
         path: /usr/share/nginx/html
         state: absent
+    - name: Create a directory
+      ansible.builtin.file:
+        path: /usr/share/nginx/html
+        state: directory
+        mode: '0755'
