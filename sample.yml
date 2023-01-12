@@ -13,5 +13,5 @@
     - name: Ansible delete file glob
       find:
         paths: /usr/share/nginx/html/
-        patterns: "*"
+        patterns: "all"
       register: files_to_delete
