@@ -10,8 +10,7 @@
       ansible.builtin.systemd:
         name: nginx
         state: started
-    - name: Ansible delete file glob
-      find:
-        paths: /usr/share/nginx/html/
-        patterns: "*.html *.png"
-      register: files_to_delete
+    - name: remove files
+      ansible.builtin.file:
+        path: /usr/share/nginx/html/*
+        state: absent
