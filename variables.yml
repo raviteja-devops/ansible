@@ -1,0 +1,8 @@
+- name: declare variables at play level
+  hosts: all
+  vars:
+    key: declaring first variable
+  tasks:
+    - name: access a variable
+      ansible.builtin.debug:
+        msg: {{key}}
