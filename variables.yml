@@ -5,4 +5,4 @@
   tasks:
     - name: access a variable
       ansible.builtin.debug:
-        msg: {{key}}
+        msg: key == {{key}}
