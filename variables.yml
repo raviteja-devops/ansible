@@ -1,5 +1,7 @@
 - name: declare variables at play level
   hosts: all
+# if running on local-host, to avoid authentication
+  connection: local
   vars:
     key: declaring first variable
   tasks:
